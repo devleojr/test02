@@ -73,5 +73,8 @@ Estes passos foram testados em ambientes Windows e Linux. Em sistemas Windows, u
 =================================== POR FAVOR SE HOUVER ALGUM ERRO ATUALIZE O NAVEGADOR 2 OU 3 VEZES PARA A APLICAÇÃO RODAR E ATUALIZAR O DOCKER ==============================
 ********************************************************************************************************************************************************************************
 
+![Image 01](01.png)
+![Image 02](02.png)
+
 
 
