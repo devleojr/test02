@@ -1,0 +1,33 @@
+version: '3.3'
+services:
+  web:
+    build: .
+    container_name: php_app
+    ports:
+      - "8081:80"      
+    depends_on:
+      - mysql_db       
+    environment:
+      - DB_HOST=mysql
+      - DB_USER=root
+      - DB_PASS=123456789
+      - DB_NAME=dbconsolidai
+
+  mysql_db:
+    image: mysql:5.5
+    container_name: mysql
+    restart: always
+    environment:
+      - MYSQL_DATABASE=dbconsolidai
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=123456789
+      - MYSQL_ROOT_PASSWORD=123456789
+    ports:
+      - "3307:3306"     
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./mysql-init-scripts:/docker-entrypoint-initdb.d
+
+volumes:
+  db_data:
+
